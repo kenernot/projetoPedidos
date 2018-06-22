@@ -1,0 +1,174 @@
+object F_Principal: TF_Principal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 664
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object bt_menu: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'detailstoolbutton'
+      TabOrder = 0
+      Text = 'bt_menu'
+    end
+    object bt_info: TButton
+      Align = Right
+      Position.X = 312.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'infotoolbutton'
+      TabOrder = 1
+      Text = 'bt_info'
+    end
+    object Label1: TLabel
+      Align = Center
+      AutoSize = True
+      Size.Width = 98.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Loh Lanches'
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 616.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object MultiView1: TMultiView
+      MasterButton = bt_menu
+      Size.Width = 265.000000000000000000
+      Size.Height = 616.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      TabOrder = 0
+      object ToolBar2: TToolBar
+        Size.Width = 264.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Center
+          AutoSize = True
+          StyledSettings = [FontColor]
+          Size.Width = 80.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Stencil Std'
+          TextSettings.Font.Size = 26.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.WordWrap = False
+          Text = 'MENU'
+        end
+      end
+      object Rectangle1: TRectangle
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 53.000000000000000000
+        Size.Width = 254.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object Label3: TLabel
+          Align = Client
+          Size.Width = 254.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Login'
+        end
+      end
+      object Rectangle2: TRectangle
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 233.000000000000000000
+        Size.Width = 254.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object Label4: TLabel
+          Align = Client
+          Size.Width = 254.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Contato'
+        end
+      end
+      object Rectangle3: TRectangle
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 173.000000000000000000
+        Size.Width = 254.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = Rectangle3Click
+        object Label5: TLabel
+          Align = Client
+          Size.Width = 254.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Pedido'
+        end
+      end
+      object Rectangle4: TRectangle
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 113.000000000000000000
+        Size.Width = 254.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = Rectangle4Click
+        object Label6: TLabel
+          Align = Client
+          Size.Width = 254.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Cadastro'
+          OnClick = Label6Click
+        end
+      end
+    end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Documentos\ProjetoPedidos\BD\banco.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    AfterConnect = FDConnection1AfterConnect
+    BeforeConnect = FDConnection1BeforeConnect
+    Left = 296
+    Top = 208
+  end
+end

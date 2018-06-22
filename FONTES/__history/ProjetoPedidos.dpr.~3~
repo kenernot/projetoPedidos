@@ -1,0 +1,16 @@
+program ProjetoPedidos;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  u_main in 'u_main.pas' {F_Principal},
+  U_Cadastro in 'U_Cadastro.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TF_Principal, F_Principal);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

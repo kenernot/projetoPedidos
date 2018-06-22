@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/04/02 21:22:25.000.843,=C:\Users\lukas\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/04/02 21:23:15.000.079,C:\Documentos\ProjetoPedidos\FONTES\u_main.fmx=C:\Users\lukas\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2018/04/02 21:23:15.000.079,C:\Documentos\ProjetoPedidos\FONTES\u_main.pas=C:\Users\lukas\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/04/02 21:23:38.000.233,C:\Documentos\ProjetoPedidos\FONTES\ProjetoPedidos.dproj=C:\Users\lukas\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/04/02 22:01:07.000.421,=C:\Documentos\ProjetoPedidos\FONTES\Unit1.pas</Transaction>
+    <Transaction>2018/04/02 22:04:27.000.822,C:\Documentos\ProjetoPedidos\FONTES\U_Cadastro.fmx=C:\Documentos\ProjetoPedidos\FONTES\Unit1.fmx</Transaction>
+    <Transaction>2018/04/02 22:04:27.000.822,C:\Documentos\ProjetoPedidos\FONTES\U_Cadastro.pas=C:\Documentos\ProjetoPedidos\FONTES\Unit1.pas</Transaction>
+    <Transaction>2018/05/07 21:24:03.000.022,=C:\Documentos\ProjetoPedidos\FONTES\Unit1.pas</Transaction>
+    <Transaction>2018/05/07 21:25:20.000.638,C:\Documentos\ProjetoPedidos\FONTES\u_Pedido.pas=C:\Documentos\ProjetoPedidos\FONTES\Unit1.pas</Transaction>
+    <Transaction>2018/05/07 21:25:20.000.638,C:\Documentos\ProjetoPedidos\FONTES\u_Pedido.fmx=C:\Documentos\ProjetoPedidos\FONTES\Unit1.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="330009889b2dc2b1"/>
+	</ActiveMobileDevice>
+</BorlandProject>

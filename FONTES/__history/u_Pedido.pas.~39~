@@ -1,0 +1,134 @@
+unit u_Pedido;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.TabControl, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView,
+  Data.Bind.EngExt, FMX.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs,
+  FMX.Bind.Editors, Data.Bind.Components, Data.Bind.DBScope, FMX.Objects,
+  FMX.MultiView;
+
+type
+  TF_Pedido = class(TForm)
+    ToolBar1: TToolBar;
+    bt_menu: TButton;
+    bt_info: TButton;
+    Label1: TLabel;
+    ScaledLayout1: TScaledLayout;
+    TabControl1: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    TabItem3: TTabItem;
+    Layout1: TLayout;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    FDQ_Produto: TFDQuery;
+    ListView1: TListView;
+    FDQ_Produtoid_Grupo_Produto: TIntegerField;
+    FDQ_ProdutoNome_Grupo: TStringField;
+    FDQ_Produtointerno: TBooleanField;
+    FDQ_Produtoid_Produto: TIntegerField;
+    FDQ_ProdutoNome_Produto: TStringField;
+    FDQ_ProdutoDescricao_Produto: TStringField;
+    FDQ_ProdutoValor_Produto: TBCDField;
+    FDQ_ProdutoImagem_Produto: TBlobField;
+    FDQ_ProdutoStatus_Produto: TBooleanField;
+    FDQ_ProdutoData_Cadastro: TDateField;
+    FDQ_Produtoid_Grupo_Produto_1: TIntegerField;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkFillControlToField1: TLinkFillControlToField;
+    MultiView1: TMultiView;
+    ToolBar2: TToolBar;
+    Label2: TLabel;
+    Rectangle1: TRectangle;
+    Label3: TLabel;
+    Rectangle2: TRectangle;
+    Label4: TLabel;
+    Rectangle3: TRectangle;
+    Label5: TLabel;
+    Rectangle4: TRectangle;
+    Label6: TLabel;
+    TabItem4: TTabItem;
+    Rectangle6: TRectangle;
+    Layout4: TLayout;
+    Rectangle5: TRectangle;
+    Rectangle7: TRectangle;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+
+    procedure Rectangle5Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Rectangle6Click(Sender: TObject);
+    procedure Rectangle7Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_Pedido: TF_Pedido;
+
+implementation
+
+{$R *.fmx}
+
+uses u_main;
+
+procedure TF_Pedido.Image1Click(Sender: TObject);
+begin
+  FDQ_Produto.Params.ParamByName('Tipo').value := '1';
+  FDQ_Produto.Open();
+  TabControl1.TabIndex := 1;
+end;
+
+procedure TF_Pedido.Image2Click(Sender: TObject);
+begin
+  TabControl1.TabIndex := 1;
+  FDQ_Produto.ParamByName('Tipo').value := '2';
+  FDQ_Produto.ExecSQL;
+end;
+
+procedure TF_Pedido.Image3Click(Sender: TObject);
+begin
+
+  FDQ_Produto.ParamByName('Tipo').value := '3';
+  FDQ_Produto.Open();
+  TabControl1.TabIndex := 1;
+end;
+
+procedure TF_Pedido.Rectangle5Click(Sender: TObject);
+begin
+  FDQ_Produto.ParamByName('Tipo').value := '3';
+  FDQ_Produto.Open();
+  TabControl1.TabIndex := 1;
+end;
+
+procedure TF_Pedido.Rectangle6Click(Sender: TObject);
+begin
+
+  FDQ_Produto.Params.ParamByName('Tipo').value := '1';
+  FDQ_Produto.Open();
+  TabControl1.TabIndex := 1;
+end;
+
+procedure TF_Pedido.Rectangle7Click(Sender: TObject);
+begin
+  TabControl1.TabIndex := 1;
+  FDQ_Produto.ParamByName('Tipo').value := '2';
+  FDQ_Produto.ExecSQL;
+end;
+
+end.
